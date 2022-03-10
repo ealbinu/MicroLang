@@ -2,7 +2,9 @@
 ## Super mega simple Javascript Localization
 
 Switch language using only html attribute **data-<language>**.
-  
+ 
+### Demo
+[Codepen EXAMPLE](https://codepen.io/ealbinu/pen/KKyOYjq?editors=1100)
 
 ### Usage
 Use data-en, data-es, data-it, etc for to define the language.
