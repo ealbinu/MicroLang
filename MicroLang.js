@@ -22,11 +22,11 @@ const ChangeStyle = [
 ].join(';');
 
 
-var SwitchTongue = function(langs){
+var MicroLang = function(langs){
     languages = langs
-    console.log('%c%s', LogoStyle, 'SwitchTongue')
+    console.log('%c%s', LogoStyle, 'MicroLang')
     currentLanguage = languages[0]
-    console.log('%c%s', ChangeStyle, 'Main tongue: "'+currentLanguage+'"')
+    console.log('%c%s', ChangeStyle, 'Main lang: "'+currentLanguage+'"')
     buildDatas()
     
 }
@@ -36,7 +36,7 @@ var hashDetection = function () {
     var currenthash = location.hash.replace('#', '')
     if(languages.includes(currenthash)){
         currentLanguage = currenthash
-        console.log('%c%s', ChangeStyle, 'Tongue switch: "'+currentLanguage+'"')
+        console.log('%c%s', ChangeStyle, 'Lang switch: "'+currentLanguage+'"')
         makeSwitch()
     }
 }
