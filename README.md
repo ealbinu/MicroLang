@@ -47,10 +47,10 @@ Use data-en, data-es, data-it, etc for to define the language.
 ### Visible & Hidden (CSS Classes)
   
 ```
-  <span class="visible-en">😀</span>
-  <span class="visible-es">😀</span>
-  <span class="hide-en">😀</span>
-  <span class="hide-es">😀</span>
+  .visible-en
+  .visible-es
+  .hide-en
+  .hide-es
 
 
 ### Programmatically
