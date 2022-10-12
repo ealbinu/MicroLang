@@ -2,7 +2,7 @@
 
 
 
-## Micro Language switcher for simple websites
+## Micro Language switcher in javascript for simple websites
 
 Switch language using only html attribute **data-*LANG***
  
