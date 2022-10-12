@@ -1,4 +1,4 @@
-# Micro Lang
+# MicroLang
 
 ## Micro Javascript Language changer
 
