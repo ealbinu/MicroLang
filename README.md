@@ -55,9 +55,11 @@ Use data-en, data-es, data-it, etc for to define the language.
 ### Programmatically
 
 Calling method MicroLangSwitch(langID):
+
 ```
   <button onclick="MicroLangSwitch('en')">EN</button>
 
 Or changing the url hash:
+
 ```
   location.hash="en";
