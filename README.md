@@ -51,13 +51,15 @@ Use data-en, data-es, data-it, etc for to define the language.
   <span class="visible-es">😀</span>
   <span class="hide-en">😀</span>
   <span class="hide-es">😀</span>
-  
+
+
 ### Programmatically
 
 Calling method MicroLangSwitch(langID):
 
 ```
   <button onclick="MicroLangSwitch('en')">EN</button>
+
 
 Or changing the url hash:
 
