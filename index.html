@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MicroLang</title>
+    <meta name="description" content="Micro Javascript Language changer: Switch language using only html attribute data-*LANG*" >
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .microlang{
+        color: #023047;
+        background: #ffb703;
+        font-size: 30px;
+        font-weight: bold;
+        text-shadow: 1px 1px #fb8500;
+        padding: 10px 100px 10px 12px;
+        border-left: 12px solid #fb8500;
+        border-radius: 4px;
+        max-width: 240px;
+        margin: 20px 0;
+      }
+      .centercontent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* Nav classes */
+      nav{
+        background: white;
+        position: sticky;
+        top:0;
+        margin: 20px auto;
+      }
+      nav a {
+        padding: 10px;
+        color: #023047;
+        text-decoration: none;
+      }
+      nav a.active-language {
+        background: #ffb703;
+      }
+
+      
+
+
+      code{
+        border-left: 6px solid #fb8500;
+        border-radius: 4px;
+        padding: 4px 10px;
+        color: #ffb703;
+        background: #023047;
+        font-family: sans-serif;
+        margin-top: 40px;
+        display: block;
+      }
+      xmp{
+        color: #666666;
+        background: #f0f0f0;
+        border-left: 6px solid #fb8500;
+        border-radius: 4px;
+        padding: 4px 10px;
+      }
+      .flags{
+        font-size: 4rem; 
+      }
+      input{
+        font-size: 2rem;
+      }
+      button{
+        cursor: pointer;
+        margin: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="microlang">
+        MicroLang
+    </div>
+    <a class="github-button" data-size="large" href="https://github.com/ealbinu/MicroLang" aria-label="Download ealbinu/MicroLang on GitHub">Download</a>
+
+    
+    <code>Configuration</code>
+    <xmp>
+    <!-- Include script -->
+    <script src="MicroLang.js"></script>
+    <!-- Init MicroLang -->
+    <script>
+        //- Add  languages to be used (first is active)
+        MicroLang(['en', 'es', 'it', 'fr'])
+    </script>
+    </xmp>
+    
+    <code>Navigation</code>
+    <xmp>
+    <!-- Hash links emit the Language Switching -->
+    <nav>
+        <a href="#en">English</a>
+        <a href="#es">Español</a>
+        <a href="#it">Italiano</a>
+        <a href="#fr">Français</a>
+    </nav>
+    <!-- Active button gets the class .active-language -->
+    <!-- Hash in the url # changes to active language -->
+    </xmp>
+    <nav class="centercontent">
+      <a href="#en">English</a>
+      <a href="#es">Español</a>
+      <a href="#it">Italiano</a>
+      <a href="#fr">Français</a>
+    </nav>
+
+    <code>Text</code>
+    <xmp>
+    <span 
+        data-es="Esto es español" 
+        data-it="Questo è italiano" 
+        data-fr="C'est français">
+        This is english
+    </span>
+    </xmp>
+    <div class="centercontent">
+        <span 
+            data-es="Esto es español" 
+            data-it="Questo è italiano" 
+            data-fr="C'est français">
+            This is english
+        </span>
+    </div>
+
+    <xmp>
+    <strong data-es="Solo inglés y español">
+        Just english and spanish
+    </strong>
+    </xmp>
+
+    <div class="centercontent">
+        <strong data-es="Solo inglés y español">
+            Just english and spanish
+        </strong>
+    </div>
+
+
+    <code>Attribute</code>
+    <xmp>
+    <input
+        data-lang-attr="placeholder"
+        placeholder="Write here" 
+        data-es="Escribe aquí"
+        data-it="Scrivere qui"
+        data-fr="Écrivez ici"
+    />
+    </xmp>
+    <div class="centercontent">
+        <input
+            data-lang-attr="placeholder"
+            placeholder="Write here" 
+            data-es="Escribe aquí"
+            data-it="Scrivere qui"
+            data-fr="Écrivez ici"
+        />
+    </div>
+
+
+    <xmp>
+    <img
+        data-lang-attr="src"
+        src="https://flagcdn.com/144x108/us.png" 
+        data-es="https://flagcdn.com/144x108/es.png"
+        data-it="https://flagcdn.com/144x108/it.png"
+        data-fr="https://flagcdn.com/144x108/fr.png"
+    />
+    </xmp>
+    <div class="centercontent">
+        <img
+            data-lang-attr="src"
+            src="https://flagcdn.com/144x108/gb.png" 
+            data-es="https://flagcdn.com/144x108/es.png"
+            data-it="https://flagcdn.com/144x108/it.png"
+            data-fr="https://flagcdn.com/144x108/fr.png"
+        />
+    </div>
+
+    <code>Visible & Hidden (CSS Classes)</code>
+    <xmp>
+    <span class="visible-en">😀</span>
+    <span class="visible-es">😀</span>
+
+    <span class="hide-it">😀</span>
+    <span class="hide-fr">😀</span>
+
+    </xmp>
+
+    <div class="centercontent">
+        <ul>
+            <li>Visible only when EN: <span class="visible-en">😀</span></li>
+            <li>Visible only when ES: <span class="visible-es">👽</span></li>
+            <li>Visible only when IT: <span class="visible-it">👍</span></li>
+            <li>Visible only when FR: <span class="visible-fr">🐶</span></li>
+        </ul>
+        <ul>
+            <li>Hide when EN: <span class="hide-en">😀</span></li>
+            <li>Hide when ES: <span class="hide-es">👽</span></li>
+            <li>Hide when IT: <span class="hide-it">👍</span></li>
+            <li>Hide when FR: <span class="hide-fr">🐶</span></li>
+        </ul>
+    </div>
+
+    <code>Programmatically</code>
+    <xmp>
+    <!-- Method MicroLangSwitch(<language Id>)-->
+    <button onclick="MicroLangSwitch('en')">EN</button>
+
+    <!--
+    Script "onhaschange" to switch.
+    Replacing the hash also works:
+    -->
+    location.hash=lang;
+    </xmp>
+    <div class="centercontent">
+        <button onclick="MicroLangSwitch('en')">EN</button>
+        <button onclick="MicroLangSwitch('es')">ES</button>
+        <button onclick="MicroLangSwitch('it')">IT</button>
+        <button onclick="MicroLangSwitch('fr')">FR</button>
+    </div>
+
+
+
+    <script src="MicroLang.js"></script>
+    <script>
+      MicroLang(["en", "es", "it", "fr"]);
+    </script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
