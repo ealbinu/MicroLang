@@ -1,7 +1,7 @@
 # Micro Lang
 ## Micro Javascript Language changer
 
-Switch language using only html attribute **data-<language>**.
+Switch language using only html attribute **data-|lang|**.
  
 ### Demo
 [Codepen EXAMPLE](https://codepen.io/ealbinu/pen/KKyOYjq?editors=1100)
