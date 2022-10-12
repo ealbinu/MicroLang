@@ -14,7 +14,7 @@ Use data-en, data-es, data-it, etc for to define the language.
  <!-- Include script -->
  <script src="MicroLang.js"></script>
 
-<!-- Init SwitchTongue -->
+<!-- Init MicroLang -->
  <script>
     //- Add every language to be used.
     //- First one is the start language.
