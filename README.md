@@ -4,7 +4,8 @@
 Switch language using only html attribute **data-*LANG***
  
 ### Demo
-[Codepen EXAMPLE](https://codepen.io/ealbinu/pen/KKyOYjq?editors=1100)
+[Live](https://ealbinu.github.io/MicroLang/)
+[Codepen](https://codepen.io/ealbinu/pen/KKyOYjq?editors=1100)
 
 ### Usage
 Use data-en, data-es, data-it, etc for to define the language.
