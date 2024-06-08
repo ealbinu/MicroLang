@@ -1,7 +1,7 @@
 var languages = []
 var previousLanguage = ''
 var currentLanguage = ''
-var storagekey = 'microlang-lang'
+
 const LogoStyle = [
     'color: #023047',
     'background: #ffb703',
@@ -35,12 +35,7 @@ var MicroLang = function(langs){
 var MicroLangSwitch = function (lang){
     location.hash=lang
 }
-var storageDetection = function () {
-    let isStored = localStorage.getItem(storagekey)
-    if(isStored){
-        currentLanguage = isStored
-    }
-}
+
 var hashDetection = function () {
     var currenthash = location.hash.replace('#', '')
     if(languages.includes(currenthash)){
@@ -62,7 +57,6 @@ var buildDatas = function () {
             item.setAttribute('data-'+currentLanguage, item.getAttribute(itemAttr))
         }
     }
-    storageDetection()
     hashDetection()
     setActiveClasses()
     hideAndShow()
@@ -84,7 +78,7 @@ var makeSwitch = function () {
     }
 
    document.body.setAttribute('data-active-language', currentLanguage)
-   localStorage.setItem(storagekey, currentLanguage)
+
     setActiveClasses()
 }
 
