@@ -1,6 +1,6 @@
 {
   "name": "microlang",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Micro Language switcher in javascript for simple websites",
   "main": "index.js",
   "scripts": {

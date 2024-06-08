@@ -39,6 +39,7 @@ var storageDetection = function () {
     let isStored = localStorage.getItem(storagekey)
     if(isStored){
         currentLanguage = isStored
+        makeSwitch()
     }
 }
 var hashDetection = function () {
