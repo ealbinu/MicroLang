@@ -11,14 +11,16 @@ Switch language using only html attribute **data-*LANG***
 - [Live](https://ealbinu.github.io/MicroLang/)
 - [Codepen](https://codepen.io/ealbinu/pen/KKyOYjq?editors=1100)
 
+
 ### Usage
 
 Use data-en, data-es, data-it, etc. to define the language.
   
 ```
 <div data-es="Esto es español" data-it="Questo è italiano" data-fr="C'est français">This is english</div>
- <!-- Include script -->
- <script src="MicroLang.js"></script>
+
+<!-- Include script -->
+ <script src="https://unpkg.com/microlang/MicroLang.min.js"></script>
 
 <!-- Init MicroLang -->
  <script>
